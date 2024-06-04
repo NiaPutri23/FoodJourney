@@ -1,0 +1,130 @@
+@media screen and (min-width: 650px) {
+  .navbar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .navbar .navbar-brand img {
+    height: 50px;
+  }
+
+  .navbar .navbar-menu {
+    display: none;
+  }
+
+  .navbar .navbar-navigation {
+    position: static;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .navbar .navbar-navigation li{
+    display: inline-block;
+  }  
+  
+  .navbar .navbar-navigation li a{
+    color: white;
+  }
+
+  .page-title .title {
+    font-size: 30px;
+  }
+
+  /* welcome */
+  .welcome-message h1 {
+    font-weight: 1000;
+    font-size: 40px;
+    text-stroke: 1px white;
+    -webkit-text-stroke: 1px white;
+    margin: 15px auto;
+  }
+  
+  .welcome-message .caption{
+    color: white;
+    font-size: 20px;
+    line-height: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* main */
+  .restos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resto {
+    grid-template-columns: auto 1fr;
+  }
+
+  .resto .resto__name {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .resto .resto-info {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .place-container .place-option {
+    flex-basis: calc(33.33% - 10px); /* Mengubah flex-basis untuk layar lebih besar */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .navbar .navbar-navigation {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .restos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .restos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .restos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 200px) {
+  body *{
+    padding: 0;
+    margin: 0;
+  }
+  
+  h1{
+    font-size: 10vw; 
+  }
+
+  p{
+    font-size: 6vw;
+  }
+  .navbar .navbar-menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 10vw;
+    padding: 0px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .content{
+    padding: 0; 
+  }
+
+  .resto .resto-menu .food-drink{
+    display: block;
+  }
+
+  .resto .resto-menu .food-drink .food, .resto .resto-menu .food-drink .drink{
+    width: 100%;
+  }
+}
